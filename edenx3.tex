@@ -22,6 +22,10 @@
 \newcommand{\tdcom}{{\td},}
 % ; /
 \newcommand{\semislash}{; \slash}
+% ; //
+\newcommand{\semitwoslash}{; {\twoslash}}
+% ; ///
+\newcommand{\semitrislash}{; {\trislash}}
 % TODO a slash and then a semicolon. i suspect this is a mistake, but making a code for it so i can keep
 % track of it.
 \newcommand{\slashsemi}{\slash\ ;}
@@ -43,6 +47,8 @@
 
 % speech
 \newcommand{\said}[1]{\gl\thinspace~#1~\thinspace\gr}
+% speech, prefixed by colon
+\newcommand{\colsaid}[1]{: \said{#1}}
 
 \begin{document}
 

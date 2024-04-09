@@ -6,7 +6,7 @@
 % ---- pkgs
 \usepackage{mwe}
 \usepackage{csquotes}
-\usepackage{fdsymbol}
+\usepackage{stix}
 
 \antiquafont
 
@@ -36,7 +36,7 @@
 % track of it.
 \newcommand{\slashsemi}{\slash\ ;}
 % --- :
-\newcommand{\dashcolon}{--- :}
+\newcommand{\dashcol}{--- :}
 % ---,
 \newcommand{\dashcom}{---,}
 % , ---
@@ -48,18 +48,26 @@
 
 % open speech
 \newcommand{\gl}{
-	$\langledot$} % fdsymbol
+	$\langledot$} % stix
 % close speech
 \newcommand{\gr}{
 	$\rangledot$}
+% open nested speech
+\newcommand{\ggl}{
+	$\lcurvyangle$} % stix
+% close nested speech
+\newcommand{\ggr}{
+	$\rcurvyangle$}
 
 % speech
 \newcommand{\said}[1]{\gl\thinspace~#1~\thinspace\gr}
 % speech, prefixed by colon
 \newcommand{\colsaid}[1]{: \said{#1}}
+% nested speech
+\newcommand{\insaid}[1]{\ggl\thinspace~#1~\thinspace\ggr}
 
-% put corresponding creation ph in margin
-\newcommand{\crpage}[1]{\marginpar{#1}}
+% annotate corresponding page of creation books edition
+\newcommand{\crpage}[1]{\sidepar{#1}}
 
 \begin{document}
 
@@ -224,5 +232,5 @@ starting-point for new writing.
 \part{Eden Eden Eden}
 
 \img{edensymbols.png}
-\input{body.tex}
+\input{part1.tex}
 \end{document}

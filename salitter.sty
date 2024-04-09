@@ -1,0 +1,112 @@
+% ---- layout - lulu a5
+\newcommand{\afivelayout}[0]{
+    \setstocksize{8.52in}{6.08in} 
+    \settrimmedsize{7.27in}{4.53in}{*}
+    \settrims{0.50in}{0.75in}
+    \setlrmarginsandblock{0.125in}{0.125in}{*} 
+    \setulmarginsandblock{50pt}{*}{*}
+    \setheaderspaces{*}{*}{1.618}
+    \checkandfixthelayout}
+
+% ---- layout - us letter, on laser printer
+\newcommand{\usletterlayout}[0]{
+    \setstocksize{8.5in}{5in} 
+    \settrimmedsize{8in}{4.5in}{*}
+    \settrims{0.25in}{0.25in}
+    \setlrmarginsandblock{0.125in}{0.125in}{*} 
+    \setulmarginsandblock{50pt}{*}{*}
+    \setheaderspaces{*}{*}{1.618}
+    \checkandfixthelayout}
+
+% ---- layout duct tape
+
+% some section where we just want to not be indenting paragraphs for a while
+% obviously shouldnt be nested
+% \newlength{\savelength}
+% \newenvironment{noindent}{
+%     \setlength{\savelength}{parindent}
+%     \setlength{\parindent}{0}}{
+%    \setlength{\parindent}{savelength}}
+
+% ---- image shorthand
+
+% \graphicspath{ {img/} } % a default, which could/should be changed
+
+\newcommand{\img}[1]{
+    \begin{center}
+    % \includegraphics[width=0.9\textwidth]{1.1.1.png}
+    \includegraphics[scale=1]{#1}
+\end{center}}
+
+% ---- font (antiqua)
+
+\newcommand{\antiquafont}[0]{
+    \usepackage{baskervald}
+    \usepackage[T1]{fontenc}}
+
+% ---- metadata for a title page
+
+% ---- semantic punctuation, etc
+% quoting a word when speaking of a word itself
+\newcommand{\word}[1]{
+    \enquote{#1}}
+
+% ---- odds-and-ends added for aurora
+
+\newcommand{\textquotetranslate}[3]{\enquote{#1} ({#2} --- #3)}
+
+% eg, \term with translation
+\newcommand{\termtranslate}[2]{\emph{#1} ({#2})}
+
+% eg, "quotedword" with translation
+\newcommand{\wordtranslate}[2]{\enquote{#1} ({#2})}
+
+% textquote with citation
+\newcommand{\citedquote}[2]{\enquote{#1} ({#2})}
+
+% inclusion of text in original language, w/ citation, w/o translation
+\newcommand{\citedoriginal}[3]{(\emph{#1} --- {#2})}
+
+% the original construct in the text is unclear to me
+% \newcommand{\citedoriginal}[3]{({#1} --- \emph{#2} {#3})}
+
+% ---- random odds-and-ends components
+\newcommand{\nofolios}{
+	\pagestyle{empty}}
+
+% timeforms bits i may use elsewhere...
+\newcommand{\speaker}[1]{
+        \textsc{#1}}
+
+\newenvironment{dialogue}{
+    % we want opposite indentation for paragraphs: first line of each paragraph not indented, every line after is indented.
+    \begin{hangparas}{2em}{1}
+}{
+    \end{hangparas}
+}
+
+% ---- random odds-and-ends components
+
+\newcommand{\articletitle}[1]{\enquote{#1}}
+\newcommand{\booktitle}[1]{\emph{#1}}
+\newcommand{\journaltitle}[1]{\emph{#1}}
+\newcommand{\conferencetitle}[1]{\textit{#1}}
+\newcommand{\symposiumtitle}[1]{\enquote{#1}}
+\newcommand{\ie}[0]{i.e.}
+\newcommand{\opcit}[0]{\textit{op. cit.}}
+\newcommand{\etseq}[0]{\textit{et. seq.}}
+\newcommand{\etal}[0]{\textit{et. al.}}
+
+\newcommand{\signoff}[1]{
+    {\raggedleft #1 \par}}
+
+\newcommand{\signoffnote}[1]{
+	{\raggedleft \textit{#1} \par}}
+
+\newcommand{\chapterauthor}[1]{
+    {\large \itshape #1 \par }}
+
+% ---- symbols etc
+
+\newcommand{\gl}{\guillemotleft}
+\newcommand{\gr}{\guillemotright}

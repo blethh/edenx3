@@ -15,6 +15,7 @@
 \newcommand{\td}{..} % "two dots"
 \newcommand{\thd}{...} % "three dots", doing this "wrong" for consistency
 \newcommand{\fourdots}{....} % "four dots"
+\newcommand{\fivedots}{.....} % "five dots"
 \newcommand{\od}{.} % one dot. since actual periods are so rare, this allows me to be sure this isn't an accident
 
 \newcommand{\twoslash}{\slash\slash}
@@ -27,6 +28,8 @@
 \newcommand{\comtd}{,{\td}}
 % :..
 \newcommand{\coltd}{:{\td}}
+% :...
+\newcommand{\colthd}{:{\thd}}
 % ,...
 \newcommand{\comthd}{,{\thd}}
 % ...,
@@ -62,24 +65,22 @@
 \newcommand{\dubsemi}{; ;}
 
 % open speech
-\newcommand{\gl}{
-	$\langledot$} % stix
+\newcommand{\gl}{$\langledot$}
 % close speech
-\newcommand{\gr}{
-	$\rangledot$}
+\newcommand{\gr}{$\rangledot$}
 % open nested speech
-\newcommand{\ggl}{
-	$\lcurvyangle$} % stix
+\newcommand{\ggl}{$\lcurvyangle$} % stix
 % close nested speech
-\newcommand{\ggr}{
-	$\rcurvyangle$}
+\newcommand{\ggr}{$\rcurvyangle$}
 
 % speech
-\newcommand{\said}[1]{\gl\thinspace~#1~\thinspace\gr}
+\newcommand{\said}[1]{\gl\ #1 \gr}
 % speech, prefixed by colon
 \newcommand{\colsaid}[1]{: \said{#1}}
 % speech, prefixed by coltd (has happened a few times...)
-\newcommand{\coltdsaid}[1]{{\coltd} \said{#1}}
+\newcommand{\coltdsaid}[1]{{\coltd} \said{#1}} 
+
+\newcommand{\colthdsaid}[1]{{\colthd} \said{#1}}
 % nested speech
 \newcommand{\insaid}[1]{\ggl\thinspace~#1~\thinspace\ggr}
 
@@ -97,48 +98,49 @@
 
 % --- title page
 {
-\title{EDEN EDEN EDEN}
-
+	\thispagestyle{empty}
+	\centering \HUGE
+	\vskip 2in
+	EDEN \\
+	EDEN \\
+	EDEN
+	\par
 }
 
 \clearpage
 
 % --- colophon
+\thispagestyle{empty}
 {
-
-Pierre Guyotat
-
-ISBN 1-84068-063-6
-
-English edition first published by Creation Books in 1995
-
-This new edition published 2003
-
-www.creationbooks.com
-
-World English rights reserved
-
-© Editions Gallimard 1970
-
-Translated by Graham Fox
-
-Design: the Tears Corporation
+{\centering 
+{\Large \textsc{Eden Eden Eden}} 
+\vskip 3em 
+{\large Pierre Guyotat}
+\vskip 3em
+{\large Translated by Graham Fox} \par
 }
-\clearpage
 
-\chapter{Salitter Workings Editorial Comment}
+\vskip 1in 
 
-i have made Decisions, here. i do not own a copy of Eden Eden Eden. i do not own a creation edition
-of Eden Eden Eden, and i fucking certainly do not own a copy of the vauxhall \& company edition. i
-actually did, once! i got it from mark harwood's record label website thing. i gave it to a friend
-as a present, under strange circumstances\ldots it was an odd gesture, but i'm fairly awkward, i
-guess\ldots now they cost \$500. 
+{
+\noindent	
+\textbf{Creation edition:}
+ISBN 1-84068-063-6 \\
+English edition first published by Creation Books in 1995 \\
+This new edition published 2003 \\
+www.creationbooks.com \\
+World English rights reserved \\
+© Editions Gallimard 1970 \\
+Design: the Tears Corporation \\
+}
 
+\vskip 1in
 
+{\noindent
+this edition actually was created using autism and several pdfs by Salitter Workings in 2024.
+}
 
-\signoff{phoebe}
-\signoffnote{brooklyn 2024}
-
+}
 \clearpage
 
 \chapter{Introduction}
@@ -249,9 +251,13 @@ starting-point for new writing.
 
 \mainmatter
 
-\part{Eden Eden Eden}
+\clearpage
+\pagestyle{simple}
 
+\thispagestyle{empty}
 \img{edensymbols.png}
 \input{part1.tex}
 \input{part2.tex}
+\input{part3.tex}
+
 \end{document}

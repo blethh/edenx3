@@ -1,12 +1,13 @@
 \documentclass[10pt,twoside]{memoir}
 
 \usepackage{salitter}
-\afivelayout
+\usletteredenlayout
 
 % ---- pkgs
 \usepackage{mwe}
 \usepackage{csquotes}
 \usepackage{stix}
+\usepackage[maxfloats=400]{morefloats}
 
 \antiquafont
 
@@ -82,16 +83,19 @@
 
 \newcommand{\colthdsaid}[1]{{\colthd} \said{#1}}
 % nested speech
-\newcommand{\insaid}[1]{\ggl\thinspace~#1~\thinspace\ggr}
+\newcommand{\insaid}[1]{\ggl #1 \ggr}
 
 % annotate corresponding page of creation books edition
-\newcommand{\crpage}[1]{\sidepar{#1}}
+%  \newcommand{\crpage}[1]{\sidepar{#1}\parnopar}
+% \newcommand{\crpage}[1]{\marginpar{#1}\parnopar}
+\newcommand{\crpage}[1]{\marginpar{#1}}
 
 % this is admittedly just some whimsey
 \newcommand{\propernoun}[1]{\emph{#1}}
 
 \begin{document}
-\sideparmargin{outer}
+% \sideparmargin{outer}
+\marginparmargin{outer}
 
 \graphicspath{{img/}}
 

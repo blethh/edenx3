@@ -18,6 +18,21 @@
     \setheaderspaces{*}{*}{1.618}
     \checkandfixthelayout}
 
+% ---- layout - us letter, on laser printer
+\newcommand{\usletteredenlayout}[0]{
+    \setstocksize{8.5in}{5.5in} 
+    \settrimmedsize{8.5in}{5.5in}{*}
+    \settrims{0pt}{0pt}
+    \settypeblocksize{8in}{4in}{*}
+    \setlrmarginsandblock{0.75in}{0.75in}{*} 
+    % \setlrmargins{*}{0.5in}{*}
+    \setulmarginsandblock{50pt}{*}{*}
+    \setheadfoot{0.2in}{0.2in}
+    \setheaderspaces{*}{0.1in}{*}
+    \setmarginnotes{1em}{2em}{1em}
+    \settypeoutlayoutunit{in}
+    \checkandfixthelayout[lines]}
+
 % ---- layout duct tape
 
 % some section where we just want to not be indenting paragraphs for a while

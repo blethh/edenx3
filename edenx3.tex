@@ -7,6 +7,7 @@
 \usepackage{mwe}
 \usepackage{csquotes}
 \usepackage{stix}
+\usepackage{enumitem}
 \usepackage[maxfloats=400]{morefloats}
 
 \antiquafont
@@ -135,14 +136,22 @@ English edition first published by Creation Books in 1995 \\
 This new edition published 2003 \\
 www.creationbooks.com \\
 World English rights reserved \\
-© Editions Gallimard 1970 \\
+\textcopyright\ Editions Gallimard 1970 \\
 Design: the Tears Corporation \\
 }
 
-\vskip 1in
+\vfill
 
 {\noindent
-this edition actually was created using autism and several pdfs by Salitter Workings in 2024.
+this edition actually was created using autism and several pdfs by \mbox{Salitter Workings} in 2024.\\}
+\vfill
+{
+\noindent thank you:
+\begin{itemize}[label=$\rightarrow$]
+\item Dan Urbanski --- checking my syntax questions against original French
+\item Krzysztof Honowski, Alex Valentine Kies --- checking my syntax questions against Vauxhall edition
+\item Brea, Ix, Brooke, Derek, Kira, World Food Books, K, C, R, M, C, so many others --- giving me the strength to keep trying to do what seems to be the right thing in a world that has made it fairly clear where it stands vis a vis my continued existence
+\end{itemize}
 }
 
 }
@@ -260,7 +269,7 @@ starting-point for new writing.
 \pagestyle{simple}
 
 \thispagestyle{empty}
-\img{edensymbols.png}
+{\centering \includegraphics{img/edensymbols.png} \par}
 \input{part1.tex}
 \input{part2.tex}
 \input{part3.tex}
